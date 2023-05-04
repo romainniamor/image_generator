@@ -60,6 +60,7 @@ i:hover {
   flex-wrap: wrap;
   height: 65%;
   width: 900px;
+  gap: 30px;
 }
 
 .error {

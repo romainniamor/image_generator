@@ -1,8 +1,8 @@
 import { API_KEY } from "./config.js";
 //3 RPM
 
-const submit = document.querySelector("#submit-btn");
-const input = document.querySelector("#input");
+const submitBtn = document.querySelector("#submit-btn");
+const input = document.querySelector("input");
 const imageList = document.querySelector(".image-list");
 
 // requete auprès de l'api openai
@@ -15,7 +15,6 @@ async function getImages(event) {
     headers: {
       Authorization: `Bearer ${API_KEY}`,
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
     },
     body: JSON.stringify({
       prompt: input.value,
@@ -51,4 +50,4 @@ async function getImages(event) {
   }
 }
 
-submit.addEventListener("click", getImages);
+submitBtn.addEventListener("click", getImages);
